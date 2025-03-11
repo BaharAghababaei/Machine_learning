@@ -1,0 +1,251 @@
+---
+title: "Labor Supply Analysis Using 2016 Canadian Census Data"
+author: "Bahareh Aghababaei"
+date: "2023-01-28"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Data Cleaning & Preparation
+
+The data set was restricted in terms of province and age. British Columbia and the age between 18 and 65 were selected in the data set. In different stages, the unavailable and inapplicable data of each variable, e.g., code 88 and 99 in CFINC, were removed from the dataset to have a better estimation.
+
+```{r}
+ load("C:/Users/bahar/Documents/MSc courses/ECON 562/Assignment 2/indiv_pumf06_v2.RData")
+
+names(table)
+nrow(table)
+```
+
+```{r}
+census_2006 <- subset(table, PR==59 & AGEGRP>=7 & AGEGRP<=16 & CFINC>=1 & CFINC<=28) 
+nrow(census_2006)
+```
+
+# Non-Labor Income Calculation
+
+```{r}
+new_dataset <- subset(census_2006,select = c("WAGES", "CFINC","HRSWRK","SEX"))
+
+range_f <- c(1000,3500,6000,8500,11000,13500,16000,18500,22500,27500,32500,37500,42500,47500,52500,57500,62500,67500,72500,77500, 85000, 95000,112500, 137500, 162500, 187500, 225000, 250000)
+
+for (i in 1:58086){
+  new_dataset$Cfamily_income[i]= range_f[new_dataset$CFINC[i]]
+  new_dataset$non_labour_INC[i]=new_dataset$Cfamily_income[i]-new_dataset$WAGES[i]
+  
+}
+
+
+
+```
+
+To find the non-labor income, I used economic family income groups (CFINC) among other family variables. The reason for choosing this variable is that CFINC can better represent family income compared to EFINC and HHINC. By definition, all persons who are members of a census family are also members of an economic family. For example: two co-resident census families who are related to one another are considered one economic family; and, nieces or nephews living with aunts or uncles are considered one economic family. However, Census family is defined as a married couple and the children, or a couple living common law and the children. Thus, this index is a viable representative of a family income.
+
+# Labor Supply Elasticity
+
+```{r}
+Reg_Model <- lm(HRSWRK~WAGES+non_labour_INC,data=new_dataset)
+
+summary(Reg_Model)
+
+income_elasticity <-summary(Reg_Model)$coefficient[3,1]*mean(new_dataset$non_labour_INC)/mean(new_dataset$HRSWRK) 
+income_elasticity
+
+substitution_elasticity <-summary(Reg_Model)$coefficient[2,1]*mean(new_dataset$WAGES)/mean(new_dataset$HRSWRK) 
+
+substitution_elasticity 
+
+compensated_elasticity <- substitution_elasticity-(income_elasticity)*(mean(new_dataset$WAGES)*mean(new_dataset$HRSWRK)/mean(new_dataset$non_labour_INC))
+                                                                  
+compensated_elasticity
+```
+
+when we first run the regression, the static elasticity of substitution, income elasticity , and the compensated elasticity of substitution are 0.088, 0.120, AND -2.1 respectively. Substitution elasticity shows if we increase the wage rate, the workers tend to increase their hours of work (or decrease their leisure time) about 8% . Based on the elasticity of income, if the non-labor income increases, the labors working hours grow by 12%, which in turn decrease their leisure time. The compensated elasticity of substitution is negative which shows the effect of elasticity of non-labor income is greater than elasticity of substitution.
+
+# Gender-Based Regression Analysis (women)
+
+```{r}
+new_dataset_women <-subset(new_dataset,SEX==1) 
+
+Reg_Model_women <- lm(HRSWRK~WAGES+non_labour_INC,data=new_dataset_women)
+
+summary(Reg_Model_women)
+
+income_elasticity <-summary(Reg_Model_women)$coefficient[3,1]*mean(new_dataset_women$non_labour_INC)/mean(new_dataset_women$HRSWRK ) 
+income_elasticity
+substitution_elasticity <-summary(Reg_Model_women)$coefficient[2,1]*mean(new_dataset_women$WAGES)/mean(new_dataset_women$HRSWRK ) 
+
+substitution_elasticity 
+
+compensated_elasticity <- substitution_elasticity-(income_elasticity)*(mean(new_dataset_women$WAGES)*mean(new_dataset_women$HRSWRK)/mean(new_dataset_women$non_labour_INC))
+                                                                  
+compensated_elasticity
+    
+```
+
+# Gender-Based Regression Analysis (Men)
+
+```{r}
+new_dataset_men <-subset(new_dataset,SEX==2) 
+
+Reg_Model_men <- lm(HRSWRK~WAGES+non_labour_INC,data=new_dataset_men)
+
+summary(Reg_Model_men)
+
+income_elasticity <-summary(Reg_Model_men)$coefficient[3,1]*mean(new_dataset_men$non_labour_INC)/mean(new_dataset_men$HRSWRK ) 
+income_elasticity
+substitution_elasticity <-summary(Reg_Model_men)$coefficient[2,1]*mean(new_dataset_men$WAGES)/mean(new_dataset_men$HRSWRK ) 
+
+substitution_elasticity 
+
+compensated_elasticity <- substitution_elasticity-(income_elasticity)*(mean(new_dataset_men$WAGES)*mean(new_dataset_men$HRSWRK)/mean(new_dataset_men$non_labour_INC))
+                                                                  
+compensated_elasticity
+
+
+```
+
+We repeated the same regression model for both men and women separately.Based on the results, women and men are different in terms of income elasticity and compensated elasticity of substitution, while there are almost the same in elasticity of substitution.
+
+# New set of Features
+
+```{r}
+census_2006 <- subset(table, PR==59 &  AGEGRP>=7 & AGEGRP<=16 & CFINC>=1 & CFINC<=28) 
+
+
+census_2006$AGE_SQURE <- census_2006$AGEGRP*census_2006$AGEGRP
+
+new_dataset <- subset(census_2006,select = c("WAGES", "CFINC","HRSWRK","SEX","AGEGRP","PKID0_1","PKID15_24","PKID2_5","PKID25","PKID6_14","MARST","PR","HDGREE","IMMSTAT","ROOM","AGE_SQURE"))
+
+
+range_f <- c(1000,3500,6000,8500,11000,13500,16000,18500,22500,27500,32500,37500,42500,47500,52500,57500,62500,67500,72500,77500, 85000, 95000,112500, 137500, 162500, 187500, 225000, 250000)
+
+for (i in 1:58086){
+  new_dataset$Cfamily_income[i]= range_f[new_dataset$CFINC[i]]
+  new_dataset$non_labour_INC[i]=new_dataset$Cfamily_income[i]-new_dataset$WAGES[i]
+  
+}
+
+
+```
+
+Based on the definition of intertemporal elasticity of substitution defined by MaCurdy(1981), the intertemporal substitution effect is interpreted as an elasticity that is associated with a particular kind of parametric wage change. In particular, it determines the response of hours of work at age t to a shift in the age t wage rate holding X or the marginal utility of wealth constant. As a result, we need to introduce the variables showing people background or wage profile. Accordingly, I have considered these variables: Province, Occupation, Census family income groups, education, Investment income, Household income groups, value of the dwelling, TENUR, immigrant status, Generation status, and Aboriginal identity. For part b, we need to define some variables representing people with different wage profile , so age and age-squared can be considered to show the effect of a shift on a wage profile.
+
+# Feature Selection with LASSO
+
+```{r}
+library(glmnet)
+x1 <- subset(new_dataset, ROOM<12 & HDGREE<14   & PKID0_1<2 & PKID15_24<2 & PKID2_5<2 & PKID25<2 & PKID6_14<2)
+x1$CHILD_NUM <- rowSums(x1[,c("PKID0_1","PKID2_5","PKID6_14","PKID15_24","PKID2_5")],na.rm=TRUE )
+
+y <- as.matrix(subset(x1,select = "HRSWRK"))
+x <- as.matrix(subset(x1,select =c("WAGES","non_labour_INC","AGEGRP","MARST","PR","IMMSTAT","ROOM","HDGREE","CHILD_NUM","AGE_SQURE") ))
+
+
+lassofit <- glmnet(x,y, alpha=1, nlambda=100 )
+summary(lassofit)
+
+plot(lassofit, xvar ='lambda',label=T )
+
+
+coef(lassofit, s=0.03)
+
+
+
+
+```
+
+Based on the plot,as the lambda increases, more number of variables goes to zero and be excluded from the model. The plot shows age is a key variable and shouldn't be excluded from the model.
+
+# Cross Validation to Find the Optimal Lambda
+
+After the cross-validation, we found the optimal value for lambda, the result of lasso model based on this optimal value is as follows:
+
+```{r}
+x1 <- subset(new_dataset, ROOM<12 & HDGREE<14   & PKID0_1<2 & PKID15_24<2 & PKID2_5<2 & PKID25<2 & PKID6_14<2)
+x1$CHILD_NUM <- rowSums(x1[,c("PKID0_1","PKID2_5","PKID6_14","PKID15_24","PKID2_5")],na.rm=TRUE )
+
+y <- as.matrix(subset(x1,select = "HRSWRK"))
+x <- as.matrix(subset(x1,select =c("WAGES","non_labour_INC","AGEGRP","MARST","PR","IMMSTAT","ROOM","HDGREE","CHILD_NUM","AGE_SQURE") ))
+
+
+cvfit <- cv.glmnet(x, y,type.measure="deviance", alpha=1, nlambda=100)
+plot(cvfit)
+
+cvfit$lambda.min
+
+
+#coefficients
+coef(cvfit, s = "lambda.min")
+
+
+```
+
+Based on the result, age, number of children, marital status, immigrant status and education affect the labor supply and should be included in the model while the values of wage,province, non-labor income and number of rooms are almost zero, thus they should be excluded from the model.The reason for province is that we already limited our dataset to consider only one province, so the model cannot compare different provinces with each other.
+
+# Regression Analysis on Labor Force Participation Using Linear Probability Model
+
+```{r}
+
+new_dataset <- subset(census_2006,select = c("WAGES", "CFINC","HRSWRK","SEX","AGEGRP","PKID0_1","PKID15_24","PKID2_5","PKID25","PKID6_14","MARST","PR","HDGREE","IMMSTAT","ROOM","AGE_SQURE","LFACT","INVST","ABOID","KOL"))
+
+range_f <- c(1000,3500,6000,8500,11000,13500,16000,18500,22500,27500,32500,37500,42500,47500,52500,57500,62500,67500,72500,77500, 85000, 95000,112500, 137500, 162500, 187500, 225000, 250000)
+
+for (i in 1:58086){
+  new_dataset$Cfamily_income[i]= range_f[new_dataset$CFINC[i]]
+  new_dataset$non_labour_INC[i]=new_dataset$Cfamily_income[i]-new_dataset$WAGES[i]
+  
+}
+
+new_dataset$dummy_labour <- ifelse(new_dataset$LFACT==1&2,1,0)
+new_dataset$CHILD_NUM <- rowSums(new_dataset[,c("PKID0_1","PKID2_5","PKID6_14","PKID15_24","PKID2_5")],na.rm=TRUE )
+
+linear_prb_model <- lm(dummy_labour~WAGES+non_labour_INC+AGEGRP+AGE_SQURE+IMMSTAT+MARST+HDGREE+INVST+ROOM++ABOID+KOL+CHILD_NUM,data=new_dataset)
+
+options("scipen" = 100, "digits"=4)
+summary(linear_prb_model )
+
+
+ 
+```
+
+In the linear probability model, all variables expect marital status, the number of rooms and porvince are statistically significantly different from zero
+
+# Regression Analysis on Labor Force Participation Using Probit Model
+
+```{r}
+myprobit <- glm(dummy_labour~WAGES+non_labour_INC+AGEGRP+AGE_SQURE+IMMSTAT+MARST+HDGREE+INVST+ROOM++ABOID+KOL+CHILD_NUM, family = binomial(link = "probit"), data=new_dataset)
+
+summary(myprobit)
+```
+
+In the probit model, all variables except immigrant status, marital status, province, and the number of rooms are statically significant.
+
+# Gender-Based Probit Model Analysis (women)
+
+```{r}
+new_dataset$SEX <- census_2006$SEX
+new_dataset_women <-subset(new_dataset,SEX==1) 
+
+myprobit_WOMEN <- glm(dummy_labour~WAGES+non_labour_INC+AGEGRP+AGE_SQURE+IMMSTAT+MARST+HDGREE+INVST+ROOM++ABOID+KOL+CHILD_NUM, family = binomial(link = "probit"), data=new_dataset_women)
+
+summary(myprobit_WOMEN )
+```
+
+# Gender-Based Probit Model Analysis (Men)
+
+```{r}
+new_dataset$SEX <- census_2006$SEX
+new_dataset_men <-subset(new_dataset,SEX==2) 
+
+myprobit_MEN <- glm(dummy_labour~WAGES+non_labour_INC+AGEGRP+AGE_SQURE+IMMSTAT+MARST+HDGREE+INVST+ROOM++ABOID+KOL+CHILD_NUM, family = binomial(link = "probit"), data=new_dataset_men)
+
+summary(myprobit_MEN )
+```
+
+The results for women and men are different. For both men and women the number of rooms is insignificant in terms of statistics. While the number of children and immigrant status are a key variable for women, they should not be included for men.
