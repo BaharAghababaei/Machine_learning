@@ -6,5 +6,5 @@ Welcome to the Machine Learning repository. This project implements a deep learn
 
 🐍 **Python Implementation (Jupyter Notebook)** → [View Notebook](https://github.com/baharaghababaei/Machine_learning/blob/main/docs/Kitsilano_East.ipynb)  
 
-Python notebook demonstrating the development of the predictive model, including data preprocessing, model architecture definition, hyperparameter tuning, evaluation, and visualization of results. 
+Python notebook demonstrating the development of the predictive model, including data preprocessing, model architecture, hyperparameter tuning, evaluation, and visualization of results. 
 The model has been tested across different regions in Metro Vancouver, but this dataset specifically includes the Kitsilano North-East region, with 100 nodes and 308 edges.
