@@ -1,5 +1,8 @@
-Welcome to my Machine-learning project repository. This project implements a deep learning model using PyTorch to predict the benefits of ride-sharing in terms of cost savings. The model is trained on a dataset containing the coordinates of two passengers and the shared-ride value, allowing it to estimate how much cost is saved when they share a trip.
+📚 **Machine Learning**
 
-Cross-validation is performed to optimize hyperparameters.
+Welcome to my Machine Learning repository. This project implements a deep learning model using PyTorch to predict the benefits of ride-sharing in terms of cost savings. The model is trained on a dataset containing the coordinates of two passengers and the shared-ride value, allowing it to estimate how much cost is saved when they share a trip.
 
-Prediction errors are analyzed using scatter plots and histograms.
+🔗 Ride-Sharing Benefit Prediction
+
+📄 Python Implementation (Jupyter Notebook) → View Notebook
+Python notebook demonstrating the development of the predictive model, including data preprocessing, model architecture definition, hyperparameter tuning, evaluation, and visualization of results.
