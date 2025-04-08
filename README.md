@@ -16,6 +16,7 @@ This project implements a deep learning model using PyTorch to predict the benef
 - Visualization of prediction errors
 
 - Applied to the Kitsilano North-East area of Metro Vancouver (100 nodes, 308 edges)  
+
 🐍 **Python Implementation (Jupyter Notebook)** → [View Notebook](https://github.com/baharaghababaei/Machine_learning/blob/main/docs/Kitsilano_East.ipynb)  
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔗 2. Heart Disease Prediction
@@ -32,5 +33,5 @@ Multiple classifiers are tested, including Decision Tree, Random Forest, and XGB
 
 - Visualizing the model performance using boxplots  
 
-🐍 **Python Implementation (Jupyter Notebook)** → [View Notebook](https://github.com/baharaghababaei/Machine_learning/blob/main/docs/Heart Disease Prediction.ipynb)    
+🐍 **Python Implementation (Jupyter Notebook)** → [View Notebook](https://github.com/baharaghababaei/Machine_learning/blob/main/docs/Heart_Disease_Prediction.ipynb)    
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
