@@ -3,7 +3,7 @@
 Welcome to the Machine Learning repository. This repository contains two projects demonstrating how machine learning techniques can be applied to real-world problems using Python.
 
 
-🔗 **1. Ride-Sharing Benefit Prediction**
+🔗 **1. Ride-Sharing Benefit Prediction**  
 This project implements a deep learning model using PyTorch to predict the benefits of ride-sharing in terms of cost savings. The model is trained on a dataset containing the coordinates of two passengers and the shared-ride value, allowing it to estimate how much cost is saved when they share a trip.
 🧪 Key Features:
 
