@@ -19,7 +19,7 @@ This project implements a deep learning model using PyTorch to predict the benef
 
 🐍 **Python Implementation (Jupyter Notebook)** → [View Notebook](https://github.com/baharaghababaei/Machine_learning/blob/main/docs/Kitsilano_East.ipynb)  
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
-🔗 2. Heart Disease Prediction
+🔗 **2. Heart Disease Prediction**  
 This project builds a supervised machine learning pipeline to classify whether a patient is likely to have heart disease based on various clinical features.
 Multiple classifiers are tested, including Decision Tree, Random Forest, and XGBoost, with cross-validation and GridSearchCV used to optimize hyperparameters.
 
