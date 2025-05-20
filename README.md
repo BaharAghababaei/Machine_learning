@@ -18,7 +18,7 @@ This project implements a deep learning model using PyTorch to predict the benef
 
 - Applied to the Kitsilano North-East area of Metro Vancouver (100 nodes, 308 edges)  
 
-🐍 **Python Implementation (Jupyter Notebook)** → [View Notebook](https://github.com/baharaghababaei/Machine_learning/blob/main/docs/Kitsilano_East.ipynb) 
+🐍 **Python Implementation (Jupyter Notebook)** → [View Notebook](https://github.com/baharaghababaei/Machine_learning/blob/main/docs/ride_sharing_prediction/Kitsilano_East.ipynb) 
 
 ---
 
@@ -39,7 +39,7 @@ Multiple classifiers are tested, including Decision Tree, Random Forest, and XGB
   **Dataset Features:**  
 `Age`, `Sex`, `ChestPainType`, `RestingBP`, `Cholesterol`, `FastingBS`, `RestingECG`, `MaxHR`, `ExerciseAngina`, `Oldpeak`, `ST_Slope`
 
-🐍 **Python Implementation (Jupyter Notebook)** → [View Notebook](https://github.com/baharaghababaei/Machine_learning/blob/main/docs/Heart_Disease_Prediction.ipynb)    
+🐍 **Python Implementation (Jupyter Notebook)** → [View Notebook](https://github.com/baharaghababaei/Machine_learning/blob/main/docs/Heart_disease_classification/Heart_Disease_Prediction.ipynb)    
 
 ---
 
@@ -58,7 +58,7 @@ This project demonstrates how to build and automate a classification pipeline us
 **Dataset Features:**  
 `Pregnancies`, `PlasmaGlucose`, `DiastolicBloodPressure`, `TricepsThickness`, `SerumInsulin`, `BMI`, `DiabetesPedigree`, `Age`
 
-🐍 **Jupyter Script (pipeline + components)** → [`Diabetes_classification_pipeline.ipynb`](https://github.com/baharaghababaei/Machine_learning/blob/main/diabetes_pipeline_Azure/Diabetes_classification_pipeline.ipynb)
+🐍 **Jupyter Script (pipeline + components)** → [`Diabetes_classification_pipeline.ipynb`](https://github.com/baharaghababaei/Machine_learning/blob/main/docs/diabetes_pipeline_Azure/Diabetes_classification_pipeline.ipynb)
 
 ---
 
