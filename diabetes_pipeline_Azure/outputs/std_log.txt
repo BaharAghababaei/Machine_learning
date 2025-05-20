@@ -1,0 +1,17 @@
+
+
+
+************************************************************
+Evaluating: /mnt/azureml/cr/j/3f6ced5ea60c42478d7cab2583a1f276/cap/data-capability/wd/INPUT_model_path/logistic_regression
+[LogisticRegression] Accuracy: 0.7940
+[LogisticRegression] AUC: 0.8612
+Evaluating: /mnt/azureml/cr/j/3f6ced5ea60c42478d7cab2583a1f276/cap/data-capability/wd/INPUT_model_path/random_forest
+[RandomForestClassifier] Accuracy: 0.9290
+[RandomForestClassifier] AUC: 0.9804
+Evaluating: /mnt/azureml/cr/j/3f6ced5ea60c42478d7cab2583a1f276/cap/data-capability/wd/INPUT_model_path/xgboost
+[XGBClassifier] Accuracy: 0.9247
+[XGBClassifier] AUC: 0.9774
+************************************************************
+
+
+
