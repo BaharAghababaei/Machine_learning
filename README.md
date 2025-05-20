@@ -36,7 +36,7 @@ Multiple classifiers are tested, including Decision Tree, Random Forest, and XGB
 
 - Visualizing the model performance using boxplots
 
-  **Dataset Features:**  
+**Dataset Features:**  
 `Age`, `Sex`, `ChestPainType`, `RestingBP`, `Cholesterol`, `FastingBS`, `RestingECG`, `MaxHR`, `ExerciseAngina`, `Oldpeak`, `ST_Slope`
 
 🐍 **Python Implementation (Jupyter Notebook)** → [View Notebook](https://github.com/baharaghababaei/Machine_learning/blob/main/docs/Heart_disease_classification/Heart_Disease_Prediction.ipynb)    
