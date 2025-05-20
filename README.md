@@ -18,8 +18,10 @@ This project implements a deep learning model using PyTorch to predict the benef
 
 - Applied to the Kitsilano North-East area of Metro Vancouver (100 nodes, 308 edges)  
 
-🐍 **Python Implementation (Jupyter Notebook)** → [View Notebook](https://github.com/baharaghababaei/Machine_learning/blob/main/docs/Kitsilano_East.ipynb)  
+🐍 **Python Implementation (Jupyter Notebook)** → [View Notebook](https://github.com/baharaghababaei/Machine_learning/blob/main/docs/Kitsilano_East.ipynb) 
+
 ---
+
 🔗 **2. Heart Disease Prediction**  
 This project builds a supervised machine learning workflow to classify whether a patient is likely to have heart disease based on various clinical features.
 Multiple classifiers are tested, including Decision Tree, Random Forest, and XGBoost, with cross-validation and GridSearchCV used to optimize hyperparameters.
@@ -38,7 +40,9 @@ Multiple classifiers are tested, including Decision Tree, Random Forest, and XGB
 `Age`, `Sex`, `ChestPainType`, `RestingBP`, `Cholesterol`, `FastingBS`, `RestingECG`, `MaxHR`, `ExerciseAngina`, `Oldpeak`, `ST_Slope`
 
 🐍 **Python Implementation (Jupyter Notebook)** → [View Notebook](https://github.com/baharaghababaei/Machine_learning/blob/main/docs/Heart_Disease_Prediction.ipynb)    
+
 ---
+
 🔗 **3. Diabetes Classification with Azure ML Pipelines**  
 
 This project demonstrates how to build and automate a classification pipeline using Azure Machine Learning Studio. It classifies whether a patient is diabetic based on key clinical features. The full pipeline is developed with reusable components and MLflow tracking.
