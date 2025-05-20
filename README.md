@@ -4,7 +4,7 @@ Welcome to the Machine Learning repository. This repository contains multiple pr
 
 
 🔗 **1. Ride-Sharing Benefit Prediction**  
-This project implements a deep learning model using PyTorch to predict the benefits of ride-sharing in terms of cost savings. The model is trained on a dataset containing the coordinates of two passengers and the shared-ride value, allowing it to estimate how much cost is saved when they share a trip.
+This project implements a deep learning model using PyTorch to predict the benefits of ride-sharing in terms of cost savings. The model is trained on a dataset containing the coordinates of two passengers and the shared-ride value, allowing it to estimate how much cost is saved when they share a trip.  
 🧪 Key Features:
 
 - Data preprocessing and normalization
@@ -38,7 +38,7 @@ Multiple classifiers are tested, including Decision Tree, Random Forest, and XGB
 
 🐍 **Python Implementation (Jupyter Notebook)** → [View Notebook](https://github.com/baharaghababaei/Machine_learning/blob/main/docs/Heart_Disease_Prediction.ipynb)    
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## 🔗 3. Diabetes Classification with Azure ML Pipelines
+🔗 **3. Diabetes Classification with Azure ML Pipelines**  
 
 This project demonstrates how to build and automate a classification pipeline using Azure Machine Learning Studio. It classifies whether a patient is diabetic based on key clinical features. The full pipeline is developed with reusable components and MLflow tracking.
 
