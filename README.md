@@ -53,7 +53,7 @@ This project demonstrates how to build and automate a classification pipeline us
 - Component 2: Model training with Logistic Regression, Random Forest, and XGBoost  
 - Component 3: Model evaluation (ROC, AUC, Accuracy)  
 - MLflow logging and ROC curve artifact tracking  
-- Deployed and executed in Azure using remote compute targets  
+- Executed in Azure using remote compute targets  
 
 **Dataset Features:**  
 `Pregnancies`, `PlasmaGlucose`, `DiastolicBloodPressure`, `TricepsThickness`, `SerumInsulin`, `BMI`, `DiabetesPedigree`, `Age`
