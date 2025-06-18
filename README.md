@@ -19,7 +19,9 @@ This project implements a deep learning model using PyTorch to predict the benef
 - Applied to the Kitsilano North-East area of Metro Vancouver (100 nodes, 308 edges)  
 
 🐍 **Python Implementation (Jupyter Notebook)** → [View Notebook](https://github.com/baharaghababaei/Machine_learning/blob/main/docs/ride_sharing_prediction/Kitsilano_East.ipynb) 
-
+    
+  **Ride-sharing Analysis (document)** → [View Document]
+  (https://github.com/baharaghababaei/Machine_learning/blob/main/docs/ride_sharing_prediction/Ride-sharing Analysis.pdf)
 ---
 
 🔗 **2. Heart Disease Prediction**  
