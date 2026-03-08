@@ -75,6 +75,5 @@ The goal is to generate day-ahead travel time forecasts (96 time steps) to suppo
   
 The model learns both temporal traffic patterns and network-level congestion behaviour to improve prediction accuracy.
 
-🐍 Notebook →
-https://github.com/baharaghababaei/Machine_learning/blob/main/docs/Time_Series_Forecasting/Travel_time_Forecasting.ipynb
+🐍 Notebook → [View Notebook](https://github.com/baharaghababaei/Machine_learning/blob/main/docs/Time_Series_Forecasting/Travel_time_Forecasting.ipynb).
 ---
