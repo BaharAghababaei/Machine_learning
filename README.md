@@ -57,7 +57,7 @@ This project demonstrates how to build and automate a machine learning pipeline 
 
 ---
 
-🔗 4. Traffic Travel Time Forecasting
+🔗 **4. Traffic Travel Time Forecasting**
 
 This project builds a multi-time-series forecasting model to predict travel time across 182 origin–destination (OD) pairs in Metro Vancouver using historical traffic data.
 
