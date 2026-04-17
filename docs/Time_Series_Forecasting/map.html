@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_86c6d9e96507c4ff08cc5b331b73673d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_86c6d9e96507c4ff08cc5b331b73673d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_86c6d9e96507c4ff08cc5b331b73673d = L.map(
+                "map_86c6d9e96507c4ff08cc5b331b73673d",
+                {
+                    center: [49.25, -122.95],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_852acf67fa4019d6c61f49ae779f36f2 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_852acf67fa4019d6c61f49ae779f36f2.addTo(map_86c6d9e96507c4ff08cc5b331b73673d);
+        
+    
+            var marker_9396d34c434d36cfd1774dcd1c992fbc = L.marker(
+                [49.01127, -123.12652],
+                {
+}
+            ).addTo(map_86c6d9e96507c4ff08cc5b331b73673d);
+        
+    
+        var popup_ab6018638551caa199d9c8f9ee09a382 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b1c4a954e964b173fd266adc5f1ae1b5 = $(`<div id="html_b1c4a954e964b173fd266adc5f1ae1b5" style="width: 100.0%; height: 100.0%;">Tsawwassen Ferry</div>`)[0];
+                popup_ab6018638551caa199d9c8f9ee09a382.setContent(html_b1c4a954e964b173fd266adc5f1ae1b5);
+            
+        
+
+        marker_9396d34c434d36cfd1774dcd1c992fbc.bindPopup(popup_ab6018638551caa199d9c8f9ee09a382)
+        ;
+
+        
+    
+    
+            marker_9396d34c434d36cfd1774dcd1c992fbc.bindTooltip(
+                `<div>
+                     Tsawwassen Ferry
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b459ada5f80aeb4759d42436b90a1377 = L.marker(
+                [49.16651, -123.13662],
+                {
+}
+            ).addTo(map_86c6d9e96507c4ff08cc5b331b73673d);
+        
+    
+        var popup_b9eb64455f8beaf562b0cd352a5c17a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cf439bb3d4a803f4605c4a88337db759 = $(`<div id="html_cf439bb3d4a803f4605c4a88337db759" style="width: 100.0%; height: 100.0%;">Richmond</div>`)[0];
+                popup_b9eb64455f8beaf562b0cd352a5c17a5.setContent(html_cf439bb3d4a803f4605c4a88337db759);
+            
+        
+
+        marker_b459ada5f80aeb4759d42436b90a1377.bindPopup(popup_b9eb64455f8beaf562b0cd352a5c17a5)
+        ;
+
+        
+    
+    
+            marker_b459ada5f80aeb4759d42436b90a1377.bindTooltip(
+                `<div>
+                     Richmond
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9f5ffde533054cf36fd379f72e9e0b61 = L.marker(
+                [49.26646, -123.24572],
+                {
+}
+            ).addTo(map_86c6d9e96507c4ff08cc5b331b73673d);
+        
+    
+        var popup_3fe65064d22b172cd9fb1612b0ee687c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5afb45f6657eacfb8bc6c2e775d04480 = $(`<div id="html_5afb45f6657eacfb8bc6c2e775d04480" style="width: 100.0%; height: 100.0%;">UBC</div>`)[0];
+                popup_3fe65064d22b172cd9fb1612b0ee687c.setContent(html_5afb45f6657eacfb8bc6c2e775d04480);
+            
+        
+
+        marker_9f5ffde533054cf36fd379f72e9e0b61.bindPopup(popup_3fe65064d22b172cd9fb1612b0ee687c)
+        ;
+
+        
+    
+    
+            marker_9f5ffde533054cf36fd379f72e9e0b61.bindTooltip(
+                `<div>
+                     UBC
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_85219d970db062e5aea532ce15250e6d = L.marker(
+                [49.28135, -123.09969],
+                {
+}
+            ).addTo(map_86c6d9e96507c4ff08cc5b331b73673d);
+        
+    
+        var popup_a5c06ab3023bae22e6c43569246227f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_380eef586ecf2aa4b9e4024aac21a600 = $(`<div id="html_380eef586ecf2aa4b9e4024aac21a600" style="width: 100.0%; height: 100.0%;">Downtown</div>`)[0];
+                popup_a5c06ab3023bae22e6c43569246227f5.setContent(html_380eef586ecf2aa4b9e4024aac21a600);
+            
+        
+
+        marker_85219d970db062e5aea532ce15250e6d.bindPopup(popup_a5c06ab3023bae22e6c43569246227f5)
+        ;
+
+        
+    
+    
+            marker_85219d970db062e5aea532ce15250e6d.bindTooltip(
+                `<div>
+                     Downtown
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_234c85e06c34ce852f6ef75a8d2a974b = L.marker(
+                [49.31343, -123.07703],
+                {
+}
+            ).addTo(map_86c6d9e96507c4ff08cc5b331b73673d);
+        
+    
+        var popup_c714f5b922852675b52577ec8befda16 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0143cb77e07da9ad21911336b99d86b5 = $(`<div id="html_0143cb77e07da9ad21911336b99d86b5" style="width: 100.0%; height: 100.0%;">North Van</div>`)[0];
+                popup_c714f5b922852675b52577ec8befda16.setContent(html_0143cb77e07da9ad21911336b99d86b5);
+            
+        
+
+        marker_234c85e06c34ce852f6ef75a8d2a974b.bindPopup(popup_c714f5b922852675b52577ec8befda16)
+        ;
+
+        
+    
+    
+            marker_234c85e06c34ce852f6ef75a8d2a974b.bindTooltip(
+                `<div>
+                     North Van
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_47787ed09004568fbfb902afd723c68c = L.marker(
+                [49.27812, -122.92075],
+                {
+}
+            ).addTo(map_86c6d9e96507c4ff08cc5b331b73673d);
+        
+    
+        var popup_6f0591b12443b4c6f55967af01750736 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e38e0a6487f899481081648083d6735 = $(`<div id="html_1e38e0a6487f899481081648083d6735" style="width: 100.0%; height: 100.0%;">SFU</div>`)[0];
+                popup_6f0591b12443b4c6f55967af01750736.setContent(html_1e38e0a6487f899481081648083d6735);
+            
+        
+
+        marker_47787ed09004568fbfb902afd723c68c.bindPopup(popup_6f0591b12443b4c6f55967af01750736)
+        ;
+
+        
+    
+    
+            marker_47787ed09004568fbfb902afd723c68c.bindTooltip(
+                `<div>
+                     SFU
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_dd64a1edd5b32c49890100c91b3c36dc = L.marker(
+                [49.22838, -122.99935],
+                {
+}
+            ).addTo(map_86c6d9e96507c4ff08cc5b331b73673d);
+        
+    
+        var popup_2404172a89488b76f197a78a4c138efd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_81d5c87ee446fadf13eb2bb61237cfda = $(`<div id="html_81d5c87ee446fadf13eb2bb61237cfda" style="width: 100.0%; height: 100.0%;">Metrotown</div>`)[0];
+                popup_2404172a89488b76f197a78a4c138efd.setContent(html_81d5c87ee446fadf13eb2bb61237cfda);
+            
+        
+
+        marker_dd64a1edd5b32c49890100c91b3c36dc.bindPopup(popup_2404172a89488b76f197a78a4c138efd)
+        ;
+
+        
+    
+    
+            marker_dd64a1edd5b32c49890100c91b3c36dc.bindTooltip(
+                `<div>
+                     Metrotown
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d0a769febdf876d7bcc753b6a74c0e75 = L.marker(
+                [49.2037, -122.91459],
+                {
+}
+            ).addTo(map_86c6d9e96507c4ff08cc5b331b73673d);
+        
+    
+        var popup_f8aa35c279711d5414e9330d7730584a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7791f4869eb1fd6353f098e2dc402333 = $(`<div id="html_7791f4869eb1fd6353f098e2dc402333" style="width: 100.0%; height: 100.0%;">New Westminster</div>`)[0];
+                popup_f8aa35c279711d5414e9330d7730584a.setContent(html_7791f4869eb1fd6353f098e2dc402333);
+            
+        
+
+        marker_d0a769febdf876d7bcc753b6a74c0e75.bindPopup(popup_f8aa35c279711d5414e9330d7730584a)
+        ;
+
+        
+    
+    
+            marker_d0a769febdf876d7bcc753b6a74c0e75.bindTooltip(
+                `<div>
+                     New Westminster
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c95df9445aad4635282466032f6a115b = L.marker(
+                [49.01663, -122.7463],
+                {
+}
+            ).addTo(map_86c6d9e96507c4ff08cc5b331b73673d);
+        
+    
+        var popup_d5f1210834cc950c50afd954caf7060f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fb61173c12661f511e106ce7442b508a = $(`<div id="html_fb61173c12661f511e106ce7442b508a" style="width: 100.0%; height: 100.0%;">USA Border</div>`)[0];
+                popup_d5f1210834cc950c50afd954caf7060f.setContent(html_fb61173c12661f511e106ce7442b508a);
+            
+        
+
+        marker_c95df9445aad4635282466032f6a115b.bindPopup(popup_d5f1210834cc950c50afd954caf7060f)
+        ;
+
+        
+    
+    
+            marker_c95df9445aad4635282466032f6a115b.bindTooltip(
+                `<div>
+                     USA Border
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ea446d349330c3698f35c7068591af0f = L.marker(
+                [49.10469, -122.65647],
+                {
+}
+            ).addTo(map_86c6d9e96507c4ff08cc5b331b73673d);
+        
+    
+        var popup_00221e3d10481ec27f8ca77d9d9b8051 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a3e3019a6f74aba809659292085c7a55 = $(`<div id="html_a3e3019a6f74aba809659292085c7a55" style="width: 100.0%; height: 100.0%;">Langley</div>`)[0];
+                popup_00221e3d10481ec27f8ca77d9d9b8051.setContent(html_a3e3019a6f74aba809659292085c7a55);
+            
+        
+
+        marker_ea446d349330c3698f35c7068591af0f.bindPopup(popup_00221e3d10481ec27f8ca77d9d9b8051)
+        ;
+
+        
+    
+    
+            marker_ea446d349330c3698f35c7068591af0f.bindTooltip(
+                `<div>
+                     Langley
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_00dba1eb49165ba1592a5cfde90f554b = L.marker(
+                [49.055883, -122.381178],
+                {
+}
+            ).addTo(map_86c6d9e96507c4ff08cc5b331b73673d);
+        
+    
+        var popup_79648440cbf320ce2d2f213c4c94886f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6915137c82dbbb99f0b6164d3dd7d716 = $(`<div id="html_6915137c82dbbb99f0b6164d3dd7d716" style="width: 100.0%; height: 100.0%;">Abbotsford</div>`)[0];
+                popup_79648440cbf320ce2d2f213c4c94886f.setContent(html_6915137c82dbbb99f0b6164d3dd7d716);
+            
+        
+
+        marker_00dba1eb49165ba1592a5cfde90f554b.bindPopup(popup_79648440cbf320ce2d2f213c4c94886f)
+        ;
+
+        
+    
+    
+            marker_00dba1eb49165ba1592a5cfde90f554b.bindTooltip(
+                `<div>
+                     Abbotsford
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cb49ebc88184f5d7b92a75deaa33b4c2 = L.marker(
+                [49.21693, -122.60154],
+                {
+}
+            ).addTo(map_86c6d9e96507c4ff08cc5b331b73673d);
+        
+    
+        var popup_fcc2d6ced4463de2abb9653e9114a99b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_015a95346012a92be5e86c535fce8433 = $(`<div id="html_015a95346012a92be5e86c535fce8433" style="width: 100.0%; height: 100.0%;">Maple Ridge</div>`)[0];
+                popup_fcc2d6ced4463de2abb9653e9114a99b.setContent(html_015a95346012a92be5e86c535fce8433);
+            
+        
+
+        marker_cb49ebc88184f5d7b92a75deaa33b4c2.bindPopup(popup_fcc2d6ced4463de2abb9653e9114a99b)
+        ;
+
+        
+    
+    
+            marker_cb49ebc88184f5d7b92a75deaa33b4c2.bindTooltip(
+                `<div>
+                     Maple Ridge
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bd4869887e5165cd27c2ea8acabaa8d6 = L.marker(
+                [49.27621, -122.79744],
+                {
+}
+            ).addTo(map_86c6d9e96507c4ff08cc5b331b73673d);
+        
+    
+        var popup_87a15b7de685a6a13c12e5ecfb4bfad6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a5f684165aacf66c49a9fe6ed1c930de = $(`<div id="html_a5f684165aacf66c49a9fe6ed1c930de" style="width: 100.0%; height: 100.0%;">Coquitlam</div>`)[0];
+                popup_87a15b7de685a6a13c12e5ecfb4bfad6.setContent(html_a5f684165aacf66c49a9fe6ed1c930de);
+            
+        
+
+        marker_bd4869887e5165cd27c2ea8acabaa8d6.bindPopup(popup_87a15b7de685a6a13c12e5ecfb4bfad6)
+        ;
+
+        
+    
+    
+            marker_bd4869887e5165cd27c2ea8acabaa8d6.bindTooltip(
+                `<div>
+                     Coquitlam
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_dd98c864214f9c772322fca21bb441e8 = L.marker(
+                [49.18783, -122.84552],
+                {
+}
+            ).addTo(map_86c6d9e96507c4ff08cc5b331b73673d);
+        
+    
+        var popup_fd1d108a37e9205575d5a127646ea3fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cd1dd9477391b06be5d6fef41b964622 = $(`<div id="html_cd1dd9477391b06be5d6fef41b964622" style="width: 100.0%; height: 100.0%;">Surrey</div>`)[0];
+                popup_fd1d108a37e9205575d5a127646ea3fd.setContent(html_cd1dd9477391b06be5d6fef41b964622);
+            
+        
+
+        marker_dd98c864214f9c772322fca21bb441e8.bindPopup(popup_fd1d108a37e9205575d5a127646ea3fd)
+        ;
+
+        
+    
+    
+            marker_dd98c864214f9c772322fca21bb441e8.bindTooltip(
+                `<div>
+                     Surrey
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
